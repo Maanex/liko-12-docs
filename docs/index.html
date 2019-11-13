@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liko-12 Docs</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/docs.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        
+        <div id="sidebar">
+            <div id="header">
+                <img src="/assets/img/docs_logo.png" id="docs-logo">
+            </div>
+            <div id="nav">
+                <div id="categories">
+                    <div class="wrapper">
+                        <div class="category"
+                            v-for="c of docs.categories"
+                            :style="`--icon: url('/assets/img/categories/${c.id}.png');--bgcolor: ${c.bgcolor?c.bgcolor:'#000000'}`"
+                            :class="{active:activeCategory==c.id}">
+                            <a v-if="c.id" href="#" @click.prevent="category(c.id)"></a>
+                            <div v-if="c.id" class="tooltip" v-html="c.name"></div>
+                            <div v-if="c.id" class="dot"></div>
+                            <div v-if="!c.id" class="category-div"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="files">
+                    awdawdawda<br>
+                    awdawdawda<br>
+                    awdawdawda<br>
+                    awdawdawda<br>
+                    awdawdawda<br>
+                    awdawdawda<br>
+                    awdawdawda<br>
+                    awdawdawda<br>
+                    awdawdawda<br>
+                    awdawdawda<br>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+
+        </div>
+
+    </div>
+
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/docs.js"></script>
+</body>
+</html>
